@@ -69,7 +69,8 @@ export interface TagSelectComponentProps {
     customCreatePrefix?: string;
 }
 
-export default function TagSelector(props: TagSelectComponentProps): ReactElement {
+export default function TagSelector(props): ReactElement {
+    console.log(props.createTag.canExecute); 
     const createOption = (label: string): Option => ({
         label: label,
         value: label.replace(/\W/g, ''),
@@ -97,12 +98,15 @@ const action = async (params: MxDataActionParams) => {
                         );
                     }) as unknown) as User[];
                 }
-                const options = (outcome as User[]).map(obj =>  {
-                    return { 
-                    label: obj.EmailAddress,
-                    value: obj.EmailAddress
-                    }
-                })
+                let options; 
+                if(outcome != null){
+                    options = (outcome as User[]).map(obj =>  {
+                        return { 
+                        label: obj.EmailAddress,
+                        value: obj.EmailAddress
+                        }
+                    })
+                }
                 resolve(options);
             },
             error: reject,

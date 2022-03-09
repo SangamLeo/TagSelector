@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="mendix.tagselector.TagSelector" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+<widget id="mendix.tagselectorasync.TagSelectorAsync" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
     xmlns="http://www.mendix.com/widget/1.0/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Tag Selector</name>
+    <name>Tag Selector Async</name>
     <description>Pluggable Mendix widget to select/delete/create objects and assign them to an existing object.</description>
     <icon/>
     <properties>
